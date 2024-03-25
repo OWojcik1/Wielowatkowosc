@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:id="@+id/threadsHandlerFragmentContainer"
+        android:name="com.example.wielowatkosc_10.ThreadsHandlerFragment"
+
+        tools:layout="@layout/fragment_threads_handler" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_weight="0.5">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/showTimersFragmentContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:name="com.example.wielowatkosc_10.ShowTimersFragment"
+            tools:layout="@layout/fragment_show_timers" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/unitsFragmentContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:name="com.example.wielowatkosc_10.UnitsFragment"
+            tools:layout="@layout/fragment_units" />
+
+    </LinearLayout>
+
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/inputFragmentContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="0.25"
+      android:name="com.example.wielowatkosc_10.InputFragment"
+      tools:layout="@layout/fragment_input" />
+
+</LinearLayout>
