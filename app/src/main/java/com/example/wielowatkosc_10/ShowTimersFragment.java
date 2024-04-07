@@ -1,3 +1,6 @@
+/**
+ * Klasa ShowTimersFragment to fragment odpowiedzialny za wyświetlanie timerów.
+ */
 package com.example.wielowatkosc_10;
 
 import android.os.Bundle;
@@ -35,7 +38,7 @@ public class ShowTimersFragment extends Fragment {
         timerTextView = view.findViewById(R.id.timerTextView);
         countDownTextView = view.findViewById(R.id.countDownTextView);
 
-        sharedViewModel.getTimerInterval().observe(getViewLifecycleOwner(), interval -> {
+        sharedViewModel.getTimerValue().observe(getViewLifecycleOwner(), interval -> {
             timerTextView.setText("Interwał: " + interval);
         });
         sharedViewModel.getCountDownValue().observe(getViewLifecycleOwner(), value -> {

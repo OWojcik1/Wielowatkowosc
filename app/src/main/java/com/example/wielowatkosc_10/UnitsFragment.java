@@ -1,3 +1,7 @@
+/**
+ * Klasa UnitsFragment to fragment odpowiedzialny za obsługę spinnerów wyboru jednostek czasu.
+ */
+
 package com.example.wielowatkosc_10;
 
 import android.os.Bundle;

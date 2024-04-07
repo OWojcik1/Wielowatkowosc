@@ -1,3 +1,6 @@
+/**
+ * Klasa InputFragment to fragment odpowiedzialny za pobieranie danych wejściowych od użytkownika.
+ */
 package com.example.wielowatkosc_10;
 
 import android.os.Bundle;
@@ -41,6 +44,9 @@ public class InputFragment extends Fragment {
         applyButton.setOnClickListener(v -> applyInputs());
     }
 
+    /**
+     * Metoda applyInputs() pobiera wartości wprowadzone przez użytkownika i ustawia je w SharedViewModel.
+     */
     private void applyInputs(){
         try{
             sharedViewModel.setTimerInterval(Long.parseLong(timerIntervalInput.getText().toString()));
